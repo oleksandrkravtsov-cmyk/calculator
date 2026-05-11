@@ -1,10 +1,10 @@
 def calculator():
-    print("--- Простой калькулятор на Python ---")
+    print("--- Простий калькулятор на Python ---")
     
     try:
-        num1 = float(input("Введите первое число: "))
-        operator = input("Введите действие (+, -, *, /): ")
-        num2 = float(input("Введите второе число: "))
+        num1 = float(input("Введіть перше число: "))
+        operator = input("Введіть дію (+, -, *, /): ")
+        num2 = float(input("Введіть друге число: "))
 
         if operator == '+':
             result = num1 + num2
@@ -13,17 +13,17 @@ def calculator():
         elif operator == '*':
             result = num1 * num2
         elif operator == '/':
-            # Обработка деления на ноль
+            # Обробка ділення на нуль
             if num2 == 0:
-                return "Ошибка: на ноль делить нельзя!"
+                return "Помилка: на нуль ділити не можна!"
             result = num1 / num2
         else:
-            return "Ошибка: неверная операция."
+            return "Помилка: невірна операція."
 
         return f"Результат: {result}"
 
     except ValueError:
-        return "Ошибка: вводите только числа."
+        return "Помилка: вводьте тільки числа."
 
-# Запуск программы
+# Запуск програми
 print(calculator())
