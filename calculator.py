@@ -15,7 +15,7 @@ def calculator():
         num2 = float(input("Введіть друге число: "))
 
         if operator == '+':
-            result = num1 + num2
+            result = num1 + num3
         elif operator == '-':
             result = num1 - num2
         elif operator == '*':
