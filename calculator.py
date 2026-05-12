@@ -1,5 +1,13 @@
+import os
+from dotenv import load_dotenv
+
+# Load variables from .env file
+load_dotenv()
+
 def calculator():
-    print("--- Простий калькулятор на Python ---")
+    # Get app name from .env, fallback to default if not found
+    app_name = os.getenv("APP_NAME", "Простий калькулятор на Python")
+    print(f"--- {app_name} ---")
     
     try:
         num1 = float(input("Введіть перше число: "))
@@ -13,7 +21,6 @@ def calculator():
         elif operator == '*':
             result = num1 * num2
         elif operator == '/':
-            # Обробка ділення на нуль
             if num2 == 0:
                 return "Помилка: на нуль ділити не можна!"
             result = num1 / num2
@@ -25,6 +32,4 @@ def calculator():
     except ValueError:
         return "Помилка: вводьте тільки числа."
 
-# Запуск програми
 print(calculator())
-
