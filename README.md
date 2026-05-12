@@ -1,3 +1,3 @@
-# Мій кулькулятор  
+# My Calculator
 
-мій дуже класний калькулятор.
+My very cool calculator.
